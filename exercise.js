@@ -1,159 +1,191 @@
-// LEVEL 1
-// Q1 
-let challenge = '30 Days of JavaScript'
+//EXERCISE LEVEL 1
+// Q1
+let firstName = 'Xorlali'
+let lastName = 'Agorsor'
+let country = 'Ghana'
+let city = 'Accra'
+let age = 24
+let isMarried = false
+let year = 2024
+console.log(typeof (firstName))
+console.log(typeof (lastName))
+console.log(typeof (country))
+console.log(typeof (city))
+console.log(typeof (age))
+console.log(typeof (isMarried))
+console.log(typeof(year))
+
 
 //Q2
-console.log(challenge)
+let num = 10
+let aux = '10'
+console.log(num == aux)
 
 //Q3
-console.log(challenge.length)
+let pas = parseInt('9.8')
+let war = 10
+console.log(pas == war)
 
-//Q4
-console.log(challenge.toUpperCase())
+//Q4(i)
+let first = 3 > 1
+console.log(first) 
+
+let second = 8 > 3
+console.log(second) 
+
+let third = 10 > 7
+console.log(third) 
+
+//Q4(ii)
+
+let fourth = '20' === 20
+console.log(fourth)
+
+let fifth = "mango".length === "avocado".length
+console.log(fifth)
+
+let sixth = 10 !== 10
+console.log(sixth)
 
 //Q5
-console.log(challenge.toLowerCase())
+console.log(4 > 3)  //true
+console.log(4 >= 3) //true
+console.log(4 < 3) //false
+console.log(4 <= 3) // false
+console.log(4 == 4) //true
+console.log(4 === 4) // true
+console.log(4 != 4) //false
+console.log(4 !== 4) //false
+console.log(4 != '4') //false
+console.log(4 == '4')//true
+console.log(4 === '4')//false
+console.log('python'.length != 'jargon'.length)
 
 //Q6
-console.log(challenge.substring(3,7))
+console.log(4 > 3 && 10 < 12)//true
+console.log(4 > 3 && 10 > 12)//false
+console.log(4 > 3 || 10 > 12)//true
+console.log(4 > 3 || 10 < 12)//true
+console.log(!(4 > 3))//false
+console.log(!(4 < 3))//true
+console.log(!(false))//true
+console.log(!(4 > 3 && 10 < 12))//false
+console.log(!(4 > 3 && 10 > 12))//true
+console.log(!(4 === '4'))//true
+console.log('drag'.length == 'pyth'.length) // Having doubts about this one 
 
 //Q7
-console.log(challenge.substring(3))
+let now = new Date()
 
-//Q8
-console.log(challenge.includes('Script'))
+//Year
+console.log(now.getFullYear()) //2024
 
-//Q9
-console.log(challenge.split())
+//Month
+console.log(now.getMonth() + 1) // 3
 
-//Q10
-console.log(challenge.split(' '))
+//Date
+console.log(now.getDate()) // 28
 
-//Q11
-let companies = 'Facebook, Google, Microsoft, Apple, IBM, Oracle, Amazon'
-console.log(companies.split(', '))
+//Day
+console.log(now.getDay()) // 4
 
-//Q12
-console.log(challenge.replace('JavaScript', 'Python'))
+//Hours
+console.log(now.getHours())
 
-//Q13
-console.log(challenge.charAt(15))
+//Minuets
+console.log(now.getMinutes())
 
-//Q14
-console.log(challenge.charCodeAt('J'))
-
-//Q15
-console.log(challenge.indexOf('a'))
-
-//Q16
-console.log(challenge.lastIndexOf('a'))
-
-//Q17
-let findWord = 'You cannot end a sentence with because because because is a conjunction'
-console.log(findWord.indexOf('because'))
-
-//Q18
-console.log(findWord.lastIndexOf('because'))
-
-//Q19
-console.log(findWord.search('because'))
-
-//Q20
-let myTrimmed = ' 30 Days Of JavaScript '
-let finalTrim = myTrimmed.trim()
-console.log(finalTrim)
-
-//Q21
-console.log(challenge.startsWith('30'))
-
-//Q22
-console.log(challenge.endsWith('JavaScript'))
-
-//Q23
-console.log(challenge.match(/a/g))
-
-//Q24
-let half = '30 Days of'
-console.log(half.concat(' JavaScript'))
-
-//Q25
-console.log(challenge.repeat(5))
-
+//Elapsed time from January 1, 1970 to now
+console.log(now.getTime())
 
 //LEVEL 2
-//Q1
-console.log(`The quote \'There is no exercise better for the heart than the reaching down and lifting people up.\'by John Holmes teaches us to help one another`)
+// //Q1
+// let base = prompt('Enter number', 'Number goes here')
+// let height = prompt('Enter number', 'Number goes here')
+// let area = 0.5 * base * height
+// console.log(`Enter base: ${base}\nEnter height: ${height}\nThe area of the triangle is ${area}`)
 
-//Q2
-console.log(`\" Love is not patronizing and charity isn't about pity, it is about love. Charity and love are the same -- with charity you give love, so don't just give money but reach out your hand instead.\"`)
+// //Q2
+// let sideA = parseInt(prompt('Enter side A', 'Enter a number'))
+// let sideB = parseInt(prompt('Enter side B', 'Enter a number')) 
+// let sideC = parseInt(prompt('Enter side C', 'Enter a number')) 
+// let perimeter = sideA + sideB + sideC
+// console.log(`Enter side a: ${sideA}\nEnter side b: ${sideB}\nEnter side c: ${sideC}\nThe perimeter of a triangle is ${perimeter}`)
 
-//Q3
-let a = '10'
-let b = 10
-console.log(typeof(a))
-console.log(typeof(b))
-//changing '10' to a number I'll use parseInt()
-console.log(parseInt(a))
+// //Q3
+// let length = parseInt(prompt('Enter length', 'Enter a number'))
+// let width = parseInt(prompt('Enter width', 'Enter a number'))
+// let area1 = length * width
+// let perimeterOfRec = 2 * (length + width)
+// console.log(`Enter length : ${length}\nEnter width : ${width}\nThe area of the rectangle is ${area1}\nThe perimeter of the rectangle is ${perimeterOfRec}`)
+
+// //Q4
+// let PI = 3.14
+// let radius = parseInt(prompt('Enter radius'))
+// let area51 = PI * radius * radius
+// let circumfrence = 2 * PI * radius
+// console.log(`Enter a radius: ${radius}\nThe area of a circle is : ${area51}\nThe circumfrence of the circle is ${circumfrence}`)
 
 
-//Q4
-let changedFloat = parseFloat('9.8')
-console.log(Math.ceil(changedFloat))
+// //I did not know hwo to solve the slope questions so I skipped to Question 9 
 
-//Q5
-let py = 'python'
-let ja = 'jargon'
-console.log(py.match(/on/))
-console.log(ja.match(/on/))
-
-//Q6
-let look = 'I hope this course is not full of jargon'
-console.log(look.search('jargon'))
-
-//Q7
-const no = Math.floor(Math.random() * 101)
-console.log(no)
-
-//Q8
-const newNum = Math.floor(Math.random()  * (100-50 + 1)) + 50 //Got a little help from the web to solve this one
-
-//Q9
-const anotherNum = Math.floor(Math.random() * 226)
+// //Q9
+// let hours = parseInt(prompt('Enter hours', 'Enter a number'))
+// let ratePerHour = parseInt(prompt('Enter Rate Per Hour', 'Enter a number'))
+// let weeklyEarnings = hours * ratePerHour
+// console.log(`Enter hour: ${hours}\nEnter rate per hour: ${ratePerHour}\nYour weekly earning is ${weeklyEarnings}`)
 
 //Q10
-const access = 'JavaScript'
-const randomIndex = Math.floor(Math.random() * access.length) 
-const randomChar = access.charAt(randomIndex) // Had aome help here too
+let myName = 'Emmanuel'
+
+
+myName.length > 7
+? console.log(`${myName} is longer than 7`) 
+: console.log(`${myName} is shorter than 7`)
 
 //Q11
-console.log('1\t1\t1\t1\t1\n2\t1\t2\t4\t8\n3\t1\t3\t9\t27\n4\t1\t4\t16\t64\n5\t1\t5\t25\t125')
+let firstN = 'Emmanuella'
+let lastN = 'Agorsor'
+
+firstN.length > lastN.length ? console.log(`Your first name, ${firstN} is longer than your family name, ${lastN}`): console.log(`Your family name, ${lastN} is longer than your first name, ${firstN}`)
 
 
 //Q12
-let sliced = 'You cannot end a sentence with because because because is a conjunction'
- console.log(sliced.substr(31, 23))
-// console.log(sliced.indexOf('because'))
+let myAge = 36
+let yourAge = 28
+console.log(`I am ${myAge - yourAge} years older than you`)
 
-//LEVEL 3
+//Q13
+// const currentYear = new Date().getFullYear()
+// let birthYear = parseInt(prompt('Enter your birth year'))
+// let age1 = currentYear - birthYear
 
-//Q1
-let love1 = 'Love is the best thing in this world. Some found their love and some are still looking for their love.'
-console.log(love1.match(/love/g))
+// age1 >= 18 ? console.log(`You are ${age1} years old. You are old enough to drive`): console.log(`You are ${age1} years old. You will be allowed to drive after ${18 - age1} years `)
 
-//Q2
-let bee = 'You cannot end a sentence with because because because is a conjunction'
-console.log(bee.match(/because/g))
 
-//Q3
-const sentence1 = '%I $am@% a %tea@cher%, &and& I lo%#ve %te@a@ching%;. The@re $is no@th@ing; &as& mo@re rewarding as educa@ting &and& @emp%o@weri@ng peo@ple. ;I found tea@ching m%o@re interesting tha@n any ot#her %jo@bs. %Do@es thi%s mo@tiv#ate yo@u to be a tea@cher!? %Th#is 30#Days&OfJavaScript &is al@so $the $resu@lt of &love& of tea&ching'
 
-// const matchSentence = sentence.match(/%$@&#/g)
-// console.log(matchSentence.replace())
+//Q14
+const yourYears = parseInt(prompt('Enter number of years you live'))
+let secondsInYear = 365 * 24 * 60 * 60
+let totalSeconds = yourYears * secondsInYear
+console.log(`Enter number of years you live: ${yourYears}\nYou lived ${totalSeconds} seconds`) 
 
-console.log(sentence1.replace(/[%@$#&]/g, ''))
+//Q15
+const now1 = new Date()
+let year1 = now.getFullYear()
+let month = now.getMonth()
+let date = now.getDate()
+let hours1 = now.getHours()
+let minutes = now.getMinutes() 
 
-//Q4
-let perMonth = 5000
-let annualBonus = 10000
-let onlineCourse = 15000
-console.log(`He earns ${perMonth} euro from salary per month, ${annualBonus} euro annual bonus, ${onlineCourse} euro online courses per month. His total annual income is ${perMonth + annualBonus + onlineCourse} `)
+//(i)
+console.log(`${year1}-${month}-${date} ${hours1}:${minutes}`)
+
+//(ii)
+console.log(`${date}-${month}-${year1} ${hours1}:${minutes}`)
+
+//(iii)
+console.log(`${date}/${month}/${year1} ${hours1}:${minutes}`)
+
+//Q16
+console.log(`${year}-${month.toString().padStart(2, '0')}-${date.toString().padStart(2, '0')} ${hours1.toString().padStart(2, '0')}:${minutes.toString().padStart(2, '0')}`)
