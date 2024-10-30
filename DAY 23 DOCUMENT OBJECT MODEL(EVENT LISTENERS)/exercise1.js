@@ -16,6 +16,7 @@ let otherDivs
 body.style.display = 'flex'
 body.style.justifyContent = 'center'
 body.style.fontFamily = 'Courier New'
+body.style.height = '100vh'
 
 //Styling the h1
 h1.className = 'headingTitle'
@@ -49,8 +50,7 @@ containerDiv.style.flexWrap = 'wrap'
 containerDiv.style.gap = '5px' 
 containerDiv.style.width = '70%'
 containerDiv.style.height = 'auto'
-// containerDiv.style.textAlign = 'center'
-// containerDiv.style.justifyContent = 'flex-start'
+
 
 topDiv.style.display = 'flex'
 topDiv.style.gap = '10px' 
@@ -68,12 +68,9 @@ input.style.borderRadius = '4px'
 
 genP.style.position = 'absolute'
 genP.style.color = 'red'
-genP.style.left = '60px'
-genP.style.bottom = '15px'
-
-
-
-
+genP.style.left = '15%'
+genP.style.bottom = '40%'
+genP.style.top = '-25px'
 
 
 button.style.fontFamily = 'Courier New'
@@ -84,21 +81,15 @@ button.style.border = 'none'
 button.style.fontSize = '15px'
 button.style.borderRadius = '4px'
 
-
-
-button.addEventListener("input", () => {
-    if(input.value === String){
-        genP.textContent = 'Input value must be a number'
-       }else if (input === null){
-        genP.textContent = 'Enter number value on the inupt flield to generate numbers'
-       }else {
-        genP.textContent = ''
-       }
-})
-
-
-
 button.addEventListener("click", () => {
+    if(/[^0-9]/.test(input.value)){
+        genP.textContent = "Please enter only numbers."
+        } else if (input.value === ""){
+          genP.textContent = 'Enter number value on the inupt flield to generate numbers'
+        }else{
+          genP.textContent = ''
+        }
+
     function isPrime(num){
     if (num <= 1) return false
     for (let i = 2; i <= Math.sqrt(num); i++){
@@ -113,7 +104,7 @@ for(let i = 0; i < input.value ; i++){
     otherDivs.textContent = i
      otherDivs.style.margin = '0'
      otherDivs.style.textAlign = 'center'
-    otherDivs.style.width = '15%'
+    otherDivs.style.width = '10%'
 if (isPrime(otherDivs.textContent)){
     otherDivs.style.backgroundColor = 'red'
 }else if(otherDivs.textContent % 2 === 0){
@@ -127,36 +118,17 @@ if (isPrime(otherDivs.textContent)){
  
 })
 
-
-
-button.addEventListener("dblclick", () => {
-    function isPrime(num){
-    if (num <= 1) return false
-    for (let i = 2; i <= Math.sqrt(num); i++){
-        if(num % i === 0) return false
+button.addEventListener("change", (otherDivs) => {
+    if(otherDivs.target.value){
+   otherDivs.textContent = i
+    } else{
+        otherDivs.target.value = ''
     }
-    return true
-}
-for(let i = 0; i < input.value ; i++){
-    otherDivs = document.createElement('h1')
-    otherDivs.classname = 'numberDiv'  
-    otherDivs.style.fontSize = '40px'
-    otherDivs.textContent = i
-     otherDivs.style.margin = '0'
-     otherDivs.style.textAlign = 'center'
-    otherDivs.style.width = '15%'
-if (isPrime(otherDivs.textContent)){
-    otherDivs.style.backgroundColor = 'red'
-}else if(otherDivs.textContent % 2 === 0){
-    otherDivs.style.backgroundColor = 'green'
-}else{
-    otherDivs.style.backgroundColor = 'yellow'
-}
-
-    containerDiv.appendChild(otherDivs)
-}
- 
 })
+
+
+
+
 
 
 

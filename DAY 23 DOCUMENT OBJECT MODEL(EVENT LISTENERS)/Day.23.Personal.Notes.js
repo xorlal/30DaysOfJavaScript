@@ -184,14 +184,20 @@ myButton.addEventListener("mouseout", () => {
 //     alert(e.keyCode)
 // })
 
-const input = document.querySelector('input')
-        const p = document.querySelector('p')
+// const input = document.querySelector('input')
+//         const p = document.querySelector('p')
 
-        input.addEventListener('blur', () => {
-            p.textContent = 'Field is required'
-            p.style.color = 'red'
+//         input.addEventListener('blur', () => {
+//             p.textContent = 'Field is required'
+//             p.style.color = 'red'
 
-        })
+//         })
+
+
+//NOTE
+/*
+The "keypress" event is now considered deprecated and non-standard. It may not work consistently across all browsers and is not recommended for modern JavaScript development. Instead, you can use the "keydown" and "keyup" events, which provide more reliable and comprehensive functionality.
+*/
 
 
 
